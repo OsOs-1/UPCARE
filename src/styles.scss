@@ -1,0 +1,140 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --bg-gray-main: #F1F5F8;
+}
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: var(--bg-gray-main);
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+p {
+    color: #3e3e3e;
+}
+* {
+    transition: .3s;
+}
+.outer {
+
+    height: 35px;
+    width: 35px;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav-link {
+    color: #3E3E3E;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    i {
+        font-size: 1.5rem;
+        color: #3E3E3E;
+    }
+    .position-absolute {
+        left: 0;
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    .outer-icon{
+        background-color: #3e3e3e;
+        opacity: 1 !important;
+        border-radius: 3px;
+        i {
+            color: #fff;
+        }
+    }
+    &:hover{
+        i {
+            color: #2662F0;
+            opacity: 1;
+        }
+        p {
+            color: #3E3E3E;
+        }
+        .outer-icon{
+            height: 35px;
+            width: 35px;
+            background-color: #2662F0;
+            opacity: 1 !important;
+            border-radius: 3px;
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.nav-link-acive {
+    color: #3E3E3E;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    i {
+        font-size: 1.5rem;
+        color: #2662F0;
+        opacity: 1 !important;
+    }
+    .position-absolute {
+        left: 0;
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    .outer-icon{
+        background-color: #2662F0;
+        opacity: 1 !important;
+        border-radius: 3px;
+        i {
+            color: #fff;
+        }
+    }
+}
+
+.shadow{
+    box-shadow: 0 0 3px #142d6e2e !important;
+}
+
+.input{
+    background-color: #FFF;
+    border-radius: 10px;
+    i {
+        color: #CCC;
+        border-right: 1px solid #CCC;
+    }
+    .form-control[type="search"]{
+        border: none;
+        &:focus{
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+::-webkit-input-placeholder{
+    color: #CCC !important;
+}
+
+h6 {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.card {
+    border-radius: 5px;
+    border: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

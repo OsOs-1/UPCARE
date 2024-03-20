@@ -1,0 +1,371 @@
+<section>
+    <div class="container-fluid py-3">
+        <div class="header row justify-content-between mb-3">
+            <div class="col-9">
+                <div class="d-flex align-items-center px-3 py-1 h-100">
+                    <h5 class="m-0 me-5">Navigate to:</h5>
+                    <a routerLink="/patients" class="me-4 text-muted">| Patient</a>
+                    <a routerLink="/rooms" class="me-4 text-muted">| Rooms</a>
+                    <a routerLink="/pharmacy" class="me-4 text-muted">| Pharmacy</a>
+                    <a routerLink="/schedule" class="me-4 text-muted">| Schedule</a>
+                    <a routerLink="/bills" class="me-4 text-muted">| Bills</a>
+                    <a routerLink="/reviews" class="me-4 text-muted">| Reviews</a>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="user d-flex align-items-center">
+                    <img src="./assets/user-image.jpeg" class="w-25 rounded me-2" alt="">
+                    <div class="user-info w-75 d-flex align-items-center justify-content-between position-relative">
+                        <div class="inner">
+                            <h6 class="m-0">Fawaz</h6>
+                            <span>Admin</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down h3" style="color: #3e3e3e; cursor: pointer;"
+                            (click)="dropToggle()"></i>
+                        <div style="display: none;" class="drop card shadow position-absolute w-100 py-3">
+                            <ul class="list-unstyled m-0 d-flex align-items-center justify-content-center flex-column">
+                                <li class="d-flex align-items-center mb-2"><i
+                                        class="fa-regular fa-circle-user me-2"></i>
+                                    <p class="m-0">Profile</p>
+                                </li>
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                                    <p class="m-0">Logout</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="mb-3">Dashboard</h1>
+        <div class="row mb-2">
+            <div class="col-4 px-2 mb-2 h-auto">
+                <div class="inner card p-3 h-100">
+                    <div class="head">
+                        <h3 class="mb-3">Specializations</h3>
+                    </div>
+                    <div class="content">
+                        <div class="row g-0">
+                            <div class="col-3 h-auto">
+                                <div
+                                    class="icon-specialization rounded d-flex justify-content-center align-items-center h-100 p-3">
+                                    <i class="fa-solid fa-stethoscope display-3"></i>
+                                </div>
+                            </div>
+                            <div class="col-6 offset-1">
+                                <owl-carousel-o [options]="specializationsOptions">
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Digestive</h5>
+                                            <p>5 Doctors</p>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Digestive</h5>
+                                            <p>5 Doctors</p>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Digestive</h5>
+                                            <p>5 Doctors</p>
+                                        </div>
+                                    </ng-template>
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 px-2 mb-2 h-auto">
+                <div class="inner card p-3 h-100">
+                    <div class="head">
+                        <h3 class="mb-3">Checkup tests</h3>
+                    </div>
+                    <div class="content">
+                        <div class="row g-0">
+                            <div class="col-3 h-auto">
+                                <div
+                                    class="icon-checkup rounded d-flex justify-content-center align-items-center h-100 p-3">
+                                    <i class="fa-solid fa-vial-circle-check display-3"></i>
+                                </div>
+                            </div>
+                            <div class="col-6 offset-1">
+                                <owl-carousel-o [options]="specializationsOptions">
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Complete Blood 
+                                                Count (CBC)</h5>
+                                            <p style="color: #2662F0;">Blood test</p>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Complete Blood 
+                                                Count (CBC)</h5>
+                                            <p style="color: #2662F0;">Blood test</p>
+                                        </div>
+                                    </ng-template>
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 px-2 mb-2 h-auto">
+                <div class="inner card p-3 h-100">
+                    <div class="head">
+                        <h3 class="mb-3">Radiology tests</h3>
+                    </div>
+                    <div class="content">
+                        <div class="row g-0">
+                            <div class="col-3 h-auto">
+                                <div
+                                    class="icon-radiology rounded d-flex justify-content-center align-items-center h-100 p-3">
+                                    <i class="fa-solid fa-brain display-3"></i>
+                                </div>
+                            </div>
+                            <div class="col-6 offset-1">
+                                <owl-carousel-o [options]="specializationsOptions">
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Complete Blood 
+                                                Count (CBC)</h5>
+                                            <p style="color: #2662F0;">Blood test</p>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template carouselSlide>
+                                        <div class="inner">
+                                            <h5>Complete Blood 
+                                                Count (CBC)</h5>
+                                            <p style="color: #2662F0;">Blood test</p>
+                                        </div>
+                                    </ng-template>
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-5 px-2 mb-2">
+                <div class="card rounded shadow p-3">
+                    <div class="head d-flex justify-content-between align-items-center mb-2">
+                        <h3>Recent Services</h3>
+                        <a class="text-muted text-decoration-none" routerLink="/bills">View Bills<i class="fa-solid fa-chevron-right ms-2"></i></a>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-8">
+                            <div class="inner d-flex">
+                                <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                                <div class="data">
+                                    <h5 class="mb-0">Mustafa Mohamed</h5>
+                                    <p class="text-muted m-0">Consulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="inner d-flex align-items-center flex-column h-100">
+                                <p class="m-0 ms-auto ">120 <span style="color: #34D1BF;">EGP</span></p>
+                                <p class="m-0 ms-auto ">11:40 <i class="fa-regular fa-clock text-muted"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-8">
+                            <div class="inner d-flex">
+                                <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                                <div class="data">
+                                    <h5 class="mb-0">Mustafa Mohamed</h5>
+                                    <p class="text-muted m-0">Consulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="inner d-flex align-items-center flex-column h-100">
+                                <p class="m-0 ms-auto ">120 <span style="color: #34D1BF;">EGP</span></p>
+                                <p class="m-0 ms-auto ">11:40 <i class="fa-regular fa-clock text-muted"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-8">
+                            <div class="inner d-flex">
+                                <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                                <div class="data">
+                                    <h5 class="mb-0">Mustafa Mohamed</h5>
+                                    <p class="text-muted m-0">Consulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="inner d-flex align-items-center flex-column h-100">
+                                <p class="m-0 ms-auto ">120 <span style="color: #34D1BF;">EGP</span></p>
+                                <p class="m-0 ms-auto ">11:40 <i class="fa-regular fa-clock text-muted"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-8">
+                            <div class="inner d-flex">
+                                <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                                <div class="data">
+                                    <h5 class="mb-0">Mustafa Mohamed</h5>
+                                    <p class="text-muted m-0">Consulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="inner d-flex align-items-center flex-column h-100">
+                                <p class="m-0 ms-auto ">120 <span style="color: #34D1BF;">EGP</span></p>
+                                <p class="m-0 ms-auto ">11:40 <i class="fa-regular fa-clock text-muted"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-8">
+                            <div class="inner d-flex">
+                                <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                                <div class="data">
+                                    <h5 class="mb-0">Mustafa Mohamed</h5>
+                                    <p class="text-muted m-0">Consulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="inner d-flex align-items-center flex-column h-100">
+                                <p class="m-0 ms-auto ">120 <span style="color: #34D1BF;">EGP</span></p>
+                                <p class="m-0 ms-auto ">11:40 <i class="fa-regular fa-clock text-muted"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-8">
+                            <div class="inner d-flex">
+                                <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                                <div class="data">
+                                    <h5 class="mb-0">Mustafa Mohamed</h5>
+                                    <p class="text-muted m-0">Consulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="inner d-flex align-items-center flex-column h-100">
+                                <p class="m-0 ms-auto ">120 <span style="color: #34D1BF;">EGP</span></p>
+                                <p class="m-0 ms-auto ">11:40 <i class="fa-regular fa-clock text-muted"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="card rounded shadow p-3">
+                    <div class="head d-flex justify-content-between align-items-center mb-2">
+                        <h3>Recent Feedbacks</h3>
+                        <a class="text-muted text-decoration-none" routerLink="/reviews">View feedbacks<i class="fa-solid fa-chevron-right ms-2"></i></a>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-1">
+                            <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        </div>
+                        <div class="col-11">
+                            <div class="inner d-flex m-auto w-100">
+                                <div class="data w-100 text-truncate">
+                                    <div class="head d-flex justify-content-between">
+                                        <h5 class="mb-0">Mustafa Mohamed</h5>
+                                        <p class="m-0">Rating: 4.8</p>
+                                    </div>
+                                    <p class="text-muted m-0 text-nowrap text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat suscipit sunt et ut quam placeat aliquam in ipsam beatae. Quam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-1">
+                            <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        </div>
+                        <div class="col-11">
+                            <div class="inner d-flex m-auto w-100">
+                                <div class="data w-100 text-truncate">
+                                    <div class="head d-flex justify-content-between">
+                                        <h5 class="mb-0">Mustafa Mohamed</h5>
+                                        <p class="m-0">Rating: 4.8</p>
+                                    </div>
+                                    <p class="text-muted m-0 text-nowrap text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat suscipit sunt et ut quam placeat aliquam in ipsam beatae. Quam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-1">
+                            <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        </div>
+                        <div class="col-11">
+                            <div class="inner d-flex m-auto w-100">
+                                <div class="data w-100 text-truncate">
+                                    <div class="head d-flex justify-content-between">
+                                        <h5 class="mb-0">Mustafa Mohamed</h5>
+                                        <p class="m-0">Rating: 4.8</p>
+                                    </div>
+                                    <p class="text-muted m-0 text-nowrap text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat suscipit sunt et ut quam placeat aliquam in ipsam beatae. Quam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-1">
+                            <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        </div>
+                        <div class="col-11">
+                            <div class="inner d-flex m-auto w-100">
+                                <div class="data w-100 text-truncate">
+                                    <div class="head d-flex justify-content-between">
+                                        <h5 class="mb-0">Mustafa Mohamed</h5>
+                                        <p class="m-0">Rating: 4.8</p>
+                                    </div>
+                                    <p class="text-muted m-0 text-nowrap text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat suscipit sunt et ut quam placeat aliquam in ipsam beatae. Quam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-1">
+                            <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        </div>
+                        <div class="col-11">
+                            <div class="inner d-flex m-auto w-100">
+                                <div class="data w-100 text-truncate">
+                                    <div class="head d-flex justify-content-between">
+                                        <h5 class="mb-0">Mustafa Mohamed</h5>
+                                        <p class="m-0">Rating: 4.8</p>
+                                    </div>
+                                    <p class="text-muted m-0 text-nowrap text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat suscipit sunt et ut quam placeat aliquam in ipsam beatae. Quam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cell mx-2 rounded py-2 mb-2">
+                        <div class="col-1">
+                            <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        </div>
+                        <div class="col-11">
+                            <div class="inner d-flex m-auto w-100">
+                                <div class="data w-100 text-truncate">
+                                    <div class="head d-flex justify-content-between">
+                                        <h5 class="mb-0">Mustafa Mohamed</h5>
+                                        <p class="m-0">Rating: 4.8</p>
+                                    </div>
+                                    <p class="text-muted m-0 text-nowrap text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat suscipit sunt et ut quam placeat aliquam in ipsam beatae. Quam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,221 @@
+<section>
+    <div class="container-fluid py-3">
+        <div class="header row justify-content-between mb-3">
+            <div class="col-9">
+                <div class="input d-flex align-items-center px-3 py-1 h-100">
+                    <i class="fa-solid fa-magnifying-glass pe-3"></i>
+                    <input type="search" placeholder="search by patient name..." class="form-control">
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="user d-flex align-items-center">
+                    <img src="./assets/user-image.jpeg" class="w-25 rounded me-2" alt="">
+                    <div class="user-info w-75 d-flex align-items-center justify-content-between position-relative">
+                        <div class="inner">
+                            <h6 class="m-0">Fawaz</h6>
+                            <span>Admin</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down h3" style="color: #3e3e3e; cursor: pointer;"
+                            (click)="dropToggle()"></i>
+                        <div style="display: none;" class="drop card shadow position-absolute w-100 py-3">
+                            <ul class="list-unstyled m-0 d-flex align-items-center justify-content-center flex-column">
+                                <li class="d-flex align-items-center mb-2"><i
+                                        class="fa-regular fa-circle-user me-2"></i>
+                                    <p class="m-0">Profile</p>
+                                </li>
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                                    <p class="m-0">Logout</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="mb-3">Emergency</h1>
+        <div class="emergency container-fluid py-3 rounded shadow">
+            <div class="row mb-3 px-2">
+                <input list="on" class="w-25 me-2 form-control ms-2" placeholder="Online or Offline" value="online" name="" id="">
+                <datalist id="on">
+                    <option value="online"></option>
+                    <option value="offline"></option>
+                </datalist>
+                <input list="ss" class="w-25 me-2 form-control ms-2" placeholder="Succeded, died, still alive" name="" id="">
+                <datalist id="ss">
+                    <option value="succeded"></option>
+                    <option value="died"></option>
+                    <option value="still alive"></option>
+                </datalist>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cell mx-2 rounded py-2 mb-2">
+                <div class="col-8">
+                    <div class="inner d-flex">
+                        <img src="./assets/user-image.jpeg" style="height: 50px;" class="rounded me-2" alt="">
+                        <div class="data">
+                            <h5 class="mb-0">Mustafa Mohamed</h5>
+                            <p class="text-muted m-0">23 Years old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="inner d-flex align-items-center flex-row-reverse h-100">
+                        <div class="case-contact ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Online</p>
+                        </div>
+                        <div class="case-mode ms-2 px-5 py-1 rounded-pill">
+                            <p class="m-0">Succeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
